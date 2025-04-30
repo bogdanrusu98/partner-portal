@@ -3,7 +3,8 @@ import { PartnerService } from '../../services/partner.service';
 import { Partner } from '../../models/partner.model';
 import { NgIf, NgFor } from '@angular/common';
 import { DecimalPipe, NgClass } from '@angular/common';
-
+import { MatDialogModule, MatDialog } from '@angular/material/dialog';
+import { ErrorModalComponent } from '../error-modal.component';
 @Component({
   selector: 'app-partner-table',
   standalone: true,
@@ -11,6 +12,8 @@ import { DecimalPipe, NgClass } from '@angular/common';
     NgIf,
     NgFor,
     DecimalPipe,
+    MatDialogModule,
+
   ],
   templateUrl: './partner-table.component.html',
   styleUrls: ['./partner-table.component.css']
@@ -21,7 +24,10 @@ export class PartnerTableComponent implements OnInit {
   isLoading = true;
   error: string | null = null;
 
-  constructor(private partnerService: PartnerService) { }
+  constructor(private partnerService: PartnerService, private dialog: MatDialog) { }
+  openErrorModal() {
+    this.dialog.open(ErrorModalComponent);
+  }
 
   ngOnInit(): void {
     this.partnerService.getPartners().subscribe({

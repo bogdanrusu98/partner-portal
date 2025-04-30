@@ -12,3 +12,34 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   color: #031050!important;
   line-height: 24px!important;
 }
+.mat-calendar {
+  font-family: 'Poppins', sans-serif;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mat-calendar-body-cell {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.mat-calendar-body-cell:hover:not(.mat-calendar-body-disabled) {
+  background-color: #f3e8ff;
+}
+
+.mat-calendar-body-selected,
+.mat-calendar-body-active {
+  background-color: #5E33CE !important;
+  color: white !important;
+}
+
+.mat-calendar-period-button {
+  color: #031050;
+  font-weight: 600;
+}
+.button-gradient {
+  background: linear-gradient(-74deg, #5E33CE 2%, #1E0B50 100%);
+  background-size: 300% 300%; /* extins pentru efect mai amplu */
+  background-position: center;
+}
+

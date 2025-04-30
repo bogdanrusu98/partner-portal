@@ -8,7 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import moment from 'moment';
 import { MY_FORMATS } from '../../material-date-formats';
-
+import { MatDialogModule, MatDialog } from '@angular/material/dialog';
+import { ErrorModalComponent } from '../error-modal.component';
 @Component({
   selector: 'app-topbar',
   standalone: true,
@@ -19,6 +20,7 @@ import { MY_FORMATS } from '../../material-date-formats';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDialogModule,
   ],
   providers: [
     provideMomentDateAdapter(MY_FORMATS),
@@ -28,6 +30,12 @@ import { MY_FORMATS } from '../../material-date-formats';
   styleUrl: './topbar.component.css'
 })
 export class TopbarComponent {
-  start = new FormControl(moment());
-  end = new FormControl(moment());
+  constructor(private dialog: MatDialog) {}
+  openErrorModal() {
+    this.dialog.open(ErrorModalComponent);
+  }
+
+  start = new FormControl(moment('2022-07-06'));
+  end = new FormControl(moment('2022-08-05'));
+
 }
