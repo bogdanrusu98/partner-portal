@@ -1,59 +1,42 @@
-# PartnerPortal
+## Project Overview
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
+PartnerPortal is a single-page Angular application designed to display and manage partner data in a clear and responsive interface.
 
-## Development server
+Key features include:
 
-To start a local development server, run:
+- API integration for partner data
+- Responsive design with Tailwind CSS
+- Custom date range picker (Moment + Angular Material)
+- Gradient-styled buttons matching Figma design
+- Pagination and formatted table display
+- Modal-based error feedback for unimplemented actions
 
-```bash
-ng serve
-```
+Challenges:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Deploying to Vercel with dynamic environment variables
+- Styling Angular Material Datepicker to match Figma
+- Ensuring consistent gradients across screen sizes
 
-## Code scaffolding
+## Technologies Used
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Angular v19.2.9
+- Angular Material (Datepicker, Dialog)
+- Moment.js (date formatting)
+- Tailwind CSS (styling)
+- TypeScript
+- Vercel (hosting)
+- GitHub (version control)
 
-```bash
-ng generate component component-name
-```
+## Error Handling
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+All API interactions are wrapped in `catchError` from `rxjs` to handle network or server-side failures.  
+Additionally, all interactive actions that are not yet implemented trigger a modal error dialog using Angular Material's `MatDialog`, providing consistent user feedback.
 
-```bash
-ng generate --help
-```
+## Environment Setup
 
-## Building
+This project uses environment-specific API URLs. The `src/environments/environment.ts` and `.prod.ts` files are **not included in Git**.
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+To run locally, copy the sample file:
 
 ```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+cp src/environments/environment.sample.ts src/environments/environment.ts
