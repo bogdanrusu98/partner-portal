@@ -1,14 +1,13 @@
 <div *ngIf="isLoading" class="flex justify-center items-center py-10">
-    <div class="w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+    <div class="w-8 h-8 border-4 border-[#031050] border-t-[#5E33CE] rounded-full animate-spin"></div>
 </div>
 
 <div *ngIf="error" class="text-red-500 text-center mt-10">{{ error }}</div>
 
 <div *ngIf="!isLoading && !error" class="overflow-x-auto mt-0">
-    <table class="min-w-full">
+    <table class="table-auto">
         <thead>
             <tr class="bg-[#031050] text-left text-[#F8FCFF]">
-
                 <th class="p-3 font-normal cursor-pointer" (click)="setSort('id')">
                     <div class="flex items-center gap-1">
                         ID
@@ -94,9 +93,9 @@
                 <td class="p-3">{{ partner.partnerName }}</td>
                 <td class="p-3">{{ partner.partnerType }}</td>
                 <td class="p-3">{{ partner.contract }}</td>
-                <td class="p-3">${{ partner.grosssales }}</td>
-                <td class="p-3">${{ partner.commissions }}</td>
-                <td class="p-3">{{ partner.conversions }}</td>
+                <td class="p-3">${{ partner.grosssales | number:'1.2-2' }}</td>
+                <td class="p-3">${{ partner.commissions | number:'1.2-2' }}</td>
+                <td class="p-3">{{ partner.conversions | number:'1.0-0' }}</td>
 
                 <!-- Button Details -->
                 <td class="p-3 text-center">

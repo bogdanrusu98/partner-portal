@@ -5,3 +5,10 @@ body {
     background-color: #FCFCFC;
   }
   
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-date-range-input-inner {
+  font-size: 14px!important;
+  color: #031050!important;
+  line-height: 24px!important;
+}

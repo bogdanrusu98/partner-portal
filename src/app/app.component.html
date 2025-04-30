@@ -1,104 +1,11 @@
 <div class="flex h-screen">
-  <!-- Sidebar -->
-  <aside class="w-60 min-h-screen bg-white shadow flex flex-col p-4 space-y-6">
-    <!-- Logo -->
-    <div class="text-2xl font-bold text-black flex items-center gap-1">
-      <span class="text-pink-500 text-4xl">․</span>inflektion
-    </div>
-
-    <!-- Navigation -->
-    <nav class="flex flex-col gap-2">
-      <a href="#" class="flex items-center gap-3 px-6 py-4 bg-[#031050] text-white relative">
-        <span class="absolute -left-1 top-1/2 -translate-y-1/2 w-1 h-full bg-[#FF13B8]"></span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#FF13B8]" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2h-5v-6H10v6H5a2 2 0 0 1-2-2z"/>
-        </svg>
-        <span class="text-base font-semibold">Dashboard</span>
-      </a>
-
-      <a href="#" class="flex items-center gap-3 px-4 py-2 text-gray-400 hover:text-[#031050]">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8V21h19.2v-1.8c0-3.2-6.4-4.8-9.6-4.8z"/>
-        </svg>
-        <span class="text-sm font-medium">Partners</span>
-      </a>
-
-      <a href="#" class="flex items-center gap-3 px-4 py-2 text-gray-400 hover:text-[#031050]">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-        </svg>
-        <span class="text-sm font-medium">Approvals</span>
-      </a>
-    </nav>
-  </aside>
+  <app-sidebar></app-sidebar>
 
   <!-- Main Content -->
   <main class="flex-1 p-6 overflow-auto bg-[#F9FBFE]">
-  <!-- Top bar -->
-<div class="flex flex-col gap-4 mb-6">
-  
 
-  <div class="flex justify-between items-center">
-    
-    
-    <div class="flex flex-col gap-1">
-      <div class="flex items-center gap-2 text-2xl font-semibold text-[#031050]">
-        Power Plate
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#031050]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </div>
-      <span class="text-base font-semibold text-gray-400">Dashboard</span>
-    </div>
-
-    <!-- Avatar -->
-    <div class="flex items-center gap-2">
-      <div class="w-10 h-10 bg-[#FF14B9] rounded-full text-white flex items-center justify-center text-sm font-normal">
-        HD
-      </div>
-      <div class="text-sm text-[#031050]">
-        <div class="font-medium">TEST</div>
-        <div class="text-xs text-[#031050] font-semibold">User</div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="flex justify-between items-center flex-wrap gap-4">
-    <!-- Date Picker -->
-    <div>
-      <input type="date" class="border px-4 py-2 rounded-lg text-[#031050] text-sm shadow-sm" />
-    </div>
-
-    <!-- Buttons -->
-    <div class="flex gap-3 flex-wrap">
-      <button class="flex items-center gap-2 bg-gradient-to-r from-[#5E33CE] to-[#1E0B50] text-white px-4 py-2 rounded-full text-sm font-medium shadow hover:opacity-90 transition">
-        Choose Columns
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      
-      <button class="flex items-center gap-2 bg-gradient-to-r from-[#5E33CE] to-[#1E0B50] text-white px-4 py-2 rounded-full text-sm font-medium shadow hover:opacity-90 transition">
-        Message Partners
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      </button>
-      
-      <button class="flex items-center gap-2 bg-gradient-to-r from-[#5E33CE] to-[#1E0B50] text-white px-4 py-2 rounded-full text-sm font-medium shadow hover:opacity-90 transition">
-        Export List
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 16v-8m0 8l-4-4m4 4l4-4M4 20h16" />
-        </svg>
-      </button>
-      
-    </div>
-  </div>
-</div>
-
+    <!-- Top bar -->
+    <app-topbar></app-topbar>
 
     <!-- Partner table container -->
     <div class="overflow-hidden rounded-lg shadow bg-white pb-4">

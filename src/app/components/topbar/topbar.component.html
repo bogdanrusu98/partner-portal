@@ -1,0 +1,75 @@
+<div class="flex flex-col gap-4 mb-6">
+    <div class="flex justify-between items-center">
+
+        <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2 text-2xl font-semibold text-[#031050]">
+                Power Plate
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#031050]" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+            <span class="text-base font-semibold text-gray-400">Dashboard</span>
+        </div>
+
+        <!-- Avatar -->
+        <div class="flex items-center gap-2">
+            <div
+                class="w-10 h-10 bg-[#FF14B9] rounded-full text-white flex items-center justify-center text-sm font-normal">
+                HD
+            </div>
+            <div class="text-sm text-[#031050]">
+                <div class="font-medium">TEST</div>
+                <div class="text-xs text-[#031050] font-semibold">User</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex justify-between items-center flex-wrap gap-4">
+        <mat-form-field appearance="outline">
+            <mat-date-range-input [rangePicker]="picker"  class="text-xl">
+              <input matStartDate [formControl]="start" placeholder="Start date" />
+              <input matEndDate [formControl]="end" placeholder="End date" />
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+          
+          
+
+
+        <!-- Buttons -->
+        <div class="flex gap-3 flex-wrap">
+            <button
+                class="flex items-center leading-6 gap-2 bg-[linear-gradient(-74deg,_#5E33CE_2%,_#1E0B50_100%)] text-white px-4 py-2 rounded-full text-sm font-medium shadow hover:opacity-90 transition">
+                Choose Columns
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <button
+                class="flex items-center gap-2 bg-gradient-to-r from-[#5E33CE] to-[#1E0B50] text-white px-4 py-2 rounded-full text-sm font-medium shadow hover:opacity-90 transition">
+                Message Partners
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </button>
+
+            <button
+                class="flex items-center gap-2 bg-gradient-to-r from-[#5E33CE] to-[#1E0B50] text-white px-4 py-2 rounded-full text-sm font-medium shadow hover:opacity-90 transition">
+                Export List
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 16v-8m0 8l-4-4m4 4l4-4M4 20h16" />
+                </svg>
+            </button>
+
+        </div>
+    </div>
+</div>
